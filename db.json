@@ -1,0 +1,7 @@
+{
+  "products": [
+    { "id": 1, "title": "Hello World" },
+    { "id": 2, "title": "JSON Server" },
+    { "id": 3, "title": "test" }
+  ]
+}
