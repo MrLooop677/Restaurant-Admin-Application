@@ -75,7 +75,10 @@
           placeholder="Confirm Your Password"
           v-model.trim="$v.repeatPassword.$model"
         />
-        <div class="error" v-if="$v.repeatPassword.$dirty && !passwordsMatch()">
+        <div
+          class="text-danger"
+          v-if="$v.repeatPassword.$dirty && !passwordsMatch()"
+        >
           Passwords must be identical.
         </div>
       </div>
@@ -99,8 +102,9 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapMutations } from "vuex";
 import { required, email, minLength } from "vuelidate/lib/validators";
+import { createNewUser } from "@/services/api/auth";
 export default {
   name: "sign-up",
   data: function () {
@@ -123,20 +127,44 @@ export default {
     },
     repeatPassword: "",
   },
+  mounted() {
+    const user = localStorage.getItem("userInfo");
+    if (user) {
+      this.redirectPage("/");
+    }
+  },
   methods: {
     ...mapActions(["redirectPage"]),
+    ...mapMutations(["setUserInfo"]),
     passwordsMatch() {
       return this.$v.password.$model === this.$v.repeatPassword.$model;
     },
-    submitForm() {
-      console.log(this.$v);
-      console.log("dhjdh", this.passwordsMatch());
+    async submitForm() {
       // this.formSubmitted = true;
       this.$v.$touch();
       if (this.$v.$invalid || !this.passwordsMatch()) {
         console.log("Form submitted faild");
       } else {
-        console.log("Form submitted successfully");
+        try {
+          const data = await createNewUser({
+            name: this.name,
+            email: this.email,
+            password: this.password,
+          });
+          console.log(data);
+          if (data?.status === 201 || data?.status === 200) {
+            localStorage.setItem("userInfo", JSON.stringify(data?.data));
+            this.setUserInfo(JSON.parse(localStorage.getItem("userInfo")));
+            this.name = "";
+            this.email = "";
+            this.password = "";
+            this.repeatPassword = "";
+            this.$router.push({ path: "/" });
+          }
+        } catch (error) {
+          console.error("Error creating user:", error);
+          throw error;
+        }
         // do your submit logic here
       }
     },

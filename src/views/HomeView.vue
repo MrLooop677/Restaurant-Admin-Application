@@ -1,18 +1,40 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <navbar />
+    <p class="text-end">
+      Welcome {{ userInfo.name }}
+      <router-link :to="{ path: '/Profile' }">
+        <button class="btn btn-info" type="button">Profile</button>
+      </router-link>
+    </p>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import { mapActions, mapGetters } from "vuex";
+import Navbar from "@/components/header/Navbar.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    Navbar,
+  },
+
+  mounted() {
+    const user = localStorage.getItem("userInfo");
+    if (!user) {
+      this.redirectPage("/sign-up");
+    }
+  },
+  methods: {
+    ...mapActions(["redirectPage"]),
+    ...mapGetters(["getUserInfo"]),
+  },
+  computed: {
+    userInfo() {
+      return this.getUserInfo();
+    },
   },
 };
 </script>

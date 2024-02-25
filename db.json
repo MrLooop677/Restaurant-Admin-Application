@@ -1,39 +1,28 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": "1",
-      "title": "a title",
-      "views": 100
+      "id": "0e55",
+      "name": "eslam",
+      "password": "12345#",
+      "email": "es@cv.com"
     },
     {
-      "id": "2",
-      "title": "another title",
-      "views": 200
+      "id": "b345",
+      "name": "Eslam",
+      "email": "e@e.com",
+      "password": "12345#"
+    },
+    {
+      "id": "f203",
+      "name": "abdo",
+      "email": "abdo@abdo.com",
+      "password": "1234#"
+    },
+    {
+      "id": "12fe",
+      "name": "bbbb",
+      "email": "b@b.com",
+      "password": "123@"
     }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "1111",
-      "text": "test",
-      "postId": "1"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
