@@ -2,9 +2,9 @@
   "users": [
     {
       "id": "0e55",
-      "name": "eslam",
-      "password": "12345#",
-      "email": "es@cv.com"
+      "name": "Eslam Mahmoud",
+      "password": "555556#",
+      "email": "es@es.com"
     },
     {
       "id": "b345",
@@ -20,9 +20,101 @@
     },
     {
       "id": "12fe",
-      "name": "bbbb",
-      "email": "b@b.com",
+      "name": "Said chb",
+      "email": "cb@cb.com",
       "password": "123@"
+    },
+    {
+      "id": "ae17",
+      "name": "Eslam",
+      "email": "es@es.com",
+      "password": "12345@"
+    }
+  ],
+  "locations": [
+    {
+      "id": "1b8a",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631"
+    },
+    {
+      "id": "557d",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631"
+    },
+    {
+      "id": "f147",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631"
+    },
+    {
+      "id": "4a58",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631"
+    },
+    {
+      "id": "339f",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631"
+    },
+    {
+      "id": "ba5e",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631"
+    },
+    {
+      "id": "e900",
+      "name": "Eslam Mahmoud",
+      "address": "jkkdjdkj",
+      "phone": "01101014323"
+    },
+    {
+      "id": "0028",
+      "name": "Ali Ali",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631",
+      "userId": "ae17"
+    },
+    {
+      "id": "0826",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631",
+      "userId": "ae17"
+    },
+    {
+      "id": "3701",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631",
+      "userId": "ae17"
+    },
+    {
+      "id": "d2cc",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631",
+      "userId": "ae17"
+    },
+    {
+      "id": "c1f3",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631",
+      "userId": "ae17"
+    },
+    {
+      "id": "af06",
+      "name": "Eslam Mahmoud",
+      "address": "https://github.com/MrLooop677",
+      "phone": "01553670631",
+      "userId": "ae17"
     }
   ]
 }

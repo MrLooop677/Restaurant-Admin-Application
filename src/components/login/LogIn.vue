@@ -99,7 +99,7 @@ export default {
             this.repeatPassword = "";
             this.$router.push({ path: "/" });
           } else {
-            this.emailNotFound = "email not found";
+            this.emailNotFound = "user not found";
           }
         } catch (error) {
           console.error("Error creating user:", error);

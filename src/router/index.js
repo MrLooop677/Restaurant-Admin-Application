@@ -4,6 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import SignUp from "../views/SignUp.vue";
 import LogIn from "../views/LogIn.vue";
 import Profile from "../views/Profile.vue";
+import ErrorPage from "../views/ErrorPage";
 
 Vue.use(VueRouter);
 
@@ -36,6 +37,11 @@ const routes = [
     path: "/profile",
     name: "Profile",
     component: Profile,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "ErrorPage",
+    component: ErrorPage,
   },
 ];
 
